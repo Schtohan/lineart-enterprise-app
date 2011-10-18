@@ -1,4 +1,4 @@
-package edu.chl.johanwi.jpa.nbp.Exceptions;
+package se.linjekoll.exceptions;
 
 public class PreexistingEntityException extends Exception {
     public PreexistingEntityException(String message, Throwable cause) {

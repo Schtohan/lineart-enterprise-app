@@ -14,14 +14,14 @@
                 <h:form id="login">
                     <h:panelGrid columns="2" border="0">
                         Username: <h:inputText id="username" 
-                                       value="#{authenticationBean.userName}"/>        
+                                       value="#{Authentication.userName}"/>        
                         Password: <h:inputSecret id="password"
-                                         value="#{authenticationBean.password}"/>
+                                         value="#{Authentication.password}"/>
                     </h:panelGrid>
                     <h:commandButton id="submit" 
                              type="submit"
                              value="Logga in"
-                             action="#{authenticationBean.login}"/>
+                             action="#{Authentication.login}"/>
                     <br/>
                     <h:commandLink id="create"
                            value="Skapa nytt konto"

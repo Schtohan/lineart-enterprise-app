@@ -1,4 +1,4 @@
-package edu.chl.johanwi.jpa.nbp.Exceptions;
+package se.linjekoll.exceptions;
 
 public class NonexistentEntityException extends Exception {
     public NonexistentEntityException(String message, Throwable cause) {

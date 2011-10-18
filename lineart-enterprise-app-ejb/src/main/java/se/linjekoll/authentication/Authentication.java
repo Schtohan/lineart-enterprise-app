@@ -2,17 +2,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package se.linjekoll;
+package se.linjekoll.authentication;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.annotation.Resource;
+import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,17 +20,17 @@ import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 
+
 /**
  *
  * @author Schtohan
  */
-@ManagedBean(name = "authenticationBean")
-@RequestScoped
-public class authenticationBean {
+@Stateless
+public class Authentication {
 
     private String userName;
     private String password;
-    private String password2;
+    private String password2;    
     private List<Person> users = new ArrayList<Person>();
     private static EntityManagerFactory emf;
     
@@ -43,7 +41,7 @@ public class authenticationBean {
     private UserTransaction utx;
         
     /** Creates a new instance of nameBean */
-    public authenticationBean() {
+    public Authentication() {
         emf = Persistence.createEntityManagerFactory("users_pu");
     }
 
@@ -128,7 +126,9 @@ public class authenticationBean {
             }
             person = new Person();
             person.setUserName(userName);
-            person.setPassword(password);
+            //BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
+            //String encryptedPassword = passwordEncryptor.encryptPassword(password);
+            person.setPassword("lolzor");
             
             try {
                 utx.begin();

@@ -1,4 +1,4 @@
-package edu.chl.johanwi.jpa.nbp.Exceptions;
+package se.linjekoll.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

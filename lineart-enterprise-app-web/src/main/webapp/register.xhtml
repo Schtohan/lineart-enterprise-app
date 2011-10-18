@@ -14,20 +14,20 @@
             <h:form id="registrationForm">            
                 <h:panelGrid columns="2" border="0">
                 Username: <h:inputText id="username" 
-                                       value="#{authenticationBean.userName}"
+                                       value="#{Authentication.userName}"
                                        required="true"/><br/>
                 Password: <h:inputSecret id="password"    
-                                         value="#{authenticationBean.password}"
+                                         value="#{Authentication.password}"
                                          required="true"/><br/>
                           <h:message for="create:password" style="color: red"/>
                 Password (verify): <h:inputSecret id="passwordv"   
-                                                  value="#{authenticationBean.password2}"
+                                                  value="#{Authentication.password2}"
                                                   required="true"/>
                                    <h:message for="create:passwordv" style="color: red"/>
                 </h:panelGrid>
             <h:commandButton id="submit" 
                              value="Skapa konto"
-                             action="#{authenticationBean.createPerson}"/>
+                             action="#{Authentication.createPerson}"/>
             <h:messages style="color: red" globalOnly="true"/>
         </h:form> 
                 
