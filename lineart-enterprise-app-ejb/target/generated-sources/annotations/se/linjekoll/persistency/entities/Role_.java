@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import se.linjekoll.persistency.entities.Uzer;
 import se.linjekoll.persistency.entities.superclasses.TimeStampedEntity_;
 
-@Generated(value="EclipseLink-2.2.0.v20110202-r8913", date="2011-10-18T12:20:47")
+@Generated(value="EclipseLink-2.2.0.v20110202-r8913", date="2011-10-18T12:55:56")
 @StaticMetamodel(Role.class)
 public class Role_ extends TimeStampedEntity_ {
 

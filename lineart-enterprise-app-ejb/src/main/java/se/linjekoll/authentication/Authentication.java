@@ -7,6 +7,7 @@ package se.linjekoll.authentication;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Resource;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
@@ -19,6 +20,7 @@ import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
+import se.linjekoll.persistency.facades.LineFacade;
 
 
 /**

@@ -15,7 +15,7 @@ import se.linjekoll.persistency.entities.Uzer;
  */
 @Stateless
 public class UserFacade extends AbstractFacade<Uzer> {
-    @PersistenceContext(unitName = "postgres_pu")
+    @PersistenceContext(unitName = "users_pu")
     private EntityManager em;
 
     protected EntityManager getEntityManager() {
